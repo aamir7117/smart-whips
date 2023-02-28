@@ -10,15 +10,15 @@ User.destroy_all
 Car.destroy_all
 
 puts 'creating fake records'
-user = User.new(email: 'testing123@gmail.com',encrypted_password: 'something_long1234**!', first_name: 'aamir', last_name: 'shaikh', role: 'owner')
+user = User.new(email: 'testing123@gmail.com', encrypted_password: 'something_long1234**!', first_name: 'aamir', last_name: 'shaikh', role: 'owner')
 user.save
-car1 = Car.new(model: 'Tesla', availability: true)
+car1 = Car.new(model: 'Tesla', description: 'good', location: 'newham', price: 45)
 car1.user = user
 car1.save
-car2 = Car.new(model: 'Ferrari', availability: true)
+car2 = Car.new(model: 'Ferrari', description: 'bad', location: 'peckham', price: 30)
 car2.user = user
 car2.save
-car3 = Car.new(model: 'Lamborghini', availability: true)
+car3 = Car.new(model: 'Lamborghini', description: 'fair', location: 'brixton', price: 24)
 car3.user = user
 car3.save
 puts 'finished'

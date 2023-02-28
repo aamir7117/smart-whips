@@ -1,0 +1,6 @@
+    <%= simple_form_for [@car, @booking] do |f| %>
+          <%= f.input :details, placeholder: 'Enter any additional details about your booking' %>
+          <%= f.input :rental_start, as: :date, html5: true %>
+          <%= f.input :rental_end, as: :date, html5: true %>
+          <%= f.submit class: "btn btn-flat" %>
+        <% end %>

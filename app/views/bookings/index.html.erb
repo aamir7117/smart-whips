@@ -1,0 +1,6 @@
+<h1>your previous bookings</h1>
+<ul>
+<% @bookings.each do |booking| %>
+<li> <%= booking.car.model %> <%= booking.details %> from <%=booking.rental_start.to_formatted_s(:long)  %> to <%= booking.rental_end.to_formatted_s(:long)   %></li>
+<% end %>
+</ul>
