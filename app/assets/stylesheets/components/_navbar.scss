@@ -1,8 +1,14 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: transparent;
-  color: #ddd !important;
+  background: white;
+}
 
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-lewagon .navbar-brand img {
+  width: 40px;
 }
 
 
@@ -25,20 +31,11 @@ button {
 
 
 .nav-link {
-  color: white !important;
+  color: gray !important;
 }
 
 .nav-link:hover {
   color: #04AA6D !important;
-}
-
-
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
-
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
 }
 
 .topnav {
