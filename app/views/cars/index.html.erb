@@ -35,3 +35,9 @@
     <p><%= car.model %></p>
   <% end %>
 </div>
+
+<% @cars.each do |car| %>
+<ul>
+<li> <%= link_to car.model, car_path(car) %> </li>
+</ul>
+<% end %>
