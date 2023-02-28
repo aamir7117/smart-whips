@@ -1,7 +1,37 @@
-<h1>Car#index</h1>
-<p>Find me in app/views/car/index.html.erb</p>
-<p>hello worlds</p>
 
-<% @cars.each do |car| %>
-<%= car.model %>
-<% end %>
+<div class="container">
+  <h1>Search Results</h1>
+  <div class="d-inline p-2 dropdown">
+    <button class="btn btn-secondary dropdown-toggle search-filter" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      City
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+  <div class="d-inline p-2 dropdown">
+    <button class="btn btn-secondary dropdown-toggle search-filter" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Dates
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+  <div class="d-inline p-2 dropdown">
+    <button class="btn btn-secondary dropdown-toggle search-filter" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Car Type
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" href="#">4x4</a>
+      <a class="dropdown-item" href="#">Sedan</a>
+      <a class="dropdown-item" href="#">MiniVan</a>
+  </div>
+<p></p>
+</div class="container">
+  <% @cars.each do |car| %>
+    <img src=<%= car.model %> alt="car-stock-photo" width="500" height="200">
+    <p><%= car.model %></p>
+  <% end %>
+</div>
