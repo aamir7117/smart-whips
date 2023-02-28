@@ -22,7 +22,7 @@
   <div class="d-inline p-2 dropdown">
     <button class="btn btn-secondary dropdown-menu-left dropdown-toggle search-filter" type="button" id="dropdownMenuButton3" data-bs-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
       Car Type
-      <img src="../../assets/images/magnifying_glass.png" alt="magnifying class" width="500" height="200">
+      <%# <img src="../../assets/images/magnifying_glass.png" alt="magnifying class" width="500" height="200"> %>
     </button>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
       <a class="dropdown-item" href="#">Test3</a>
@@ -30,12 +30,6 @@
       <a class="dropdown-item" href="#">Something else here</a>
   </div>
 <p></p>
-</div class="container">
-  <% @cars.each do |car| %>
-    <img src=<%= car.model %> alt="car-stock-photo" width="500" height="200">
-    <p><%= car.model %></p>
-  <% end %>
-</div>
 
 <% @cars.each do |car| %>
 <ul>
