@@ -4,6 +4,8 @@
 
 <% @cars.each do |car| %>
 <ul>
-<li> <%= image_tag car.image_url, width: 200%> <%= link_to car.model, car_path(car) %> <%= car.description %> <%= car.location %> $<%= car.price %> per day </li>
+<li> <%= cl_image_tag car.photo.key, width: 200 if car.photo.key%> <%= image_tag car.image_url, width: 200 if car.image_url %> <%= link_to car.model, car_path(car) %> <%= car.description %> <%= car.location %> $<%= car.price %> per day </li>
 </ul>
 <% end %>
+
+<%= link_to "Add new car", new_car_path %>
