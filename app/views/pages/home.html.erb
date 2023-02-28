@@ -1,2 +1,29 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+
+<%= content_for(:navbar_class, 'navbar-home') %>
+
+<div class="home-banner" style="background-image: url(<%= asset_path 'bgt.png' %>);">
+
+
+  <div class="heading">
+    <h1>Car Rental at your fingerprint </h1>
+    <p>Make your stay painless with us</p>
+    <div class="form-inline" >
+      <select class="form-inline search-filter">
+          <option value="" disabled selected>City</option>
+          <option>London</option>
+          <option>San Francisco</option>
+      </select>
+      <input type="date" id="start" name="trip-start"
+                value="2023-02-28"
+                min="2023-01-01" max="2023-12-31" class="form-inline">
+      <select class="form-inline search-filter">
+          <option value="" disabled selected>Car Type</option>
+          <option>4x4</option>
+          <option>Sedan</option>
+          <option>MiniVan</option>
+          <option>Sports Car</option>
+      </select>
+      <button type="submit" class="btn btn-primary form-inline search-filter">Search</button>
+    </div>
+  </div>
+</div>

@@ -1,7 +1,37 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: transparent;
+  color: #ddd !important;
+
 }
+
+
+h1 {
+  color: #ddd;
+  font-family: 'Brush Script MT', cursive;
+}
+
+.navbar-home {
+  position: absolute;
+  width: 100%;
+}
+
+button {
+  color: #04AA6D;
+  position: fixed;
+  left: 1280px;
+  top: 20px;
+}
+
+
+.nav-link {
+  color: white !important;
+}
+
+.nav-link:hover {
+  color: #04AA6D !important;
+}
+
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
@@ -9,4 +39,33 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+.topnav {
+  background-color: #eb0b0b;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: right;
+  color: white !important;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: rgb(255, 255, 255);
+  font-size: larger;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
 }
