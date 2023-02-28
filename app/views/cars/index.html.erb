@@ -33,6 +33,6 @@
 
 <% @cars.each do |car| %>
 <ul>
-<li> <%= link_to car.model, car_path(car) %> </li>
+<li> <%= image_tag car.image_url, width: 200%> <%= link_to car.model, car_path(car) %> <%= car.description %> <%= car.location %> $<%= car.price %> per day </li>
 </ul>
 <% end %>

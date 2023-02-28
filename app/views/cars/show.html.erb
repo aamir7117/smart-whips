@@ -2,5 +2,6 @@
 <p>Find me in app/views/car/show.html.erb</p>
 
 <%= @car.model %>
-
+<%= image_tag @car.image_url %>
 <p><%= link_to 'book this car', new_car_booking_path(params[:id]) %></p>
+<p><%= link_to 'back to our cars', cars_path %></p>
