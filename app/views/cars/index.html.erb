@@ -1,38 +1,90 @@
 
-<div class="container">
-  <h1>Search Results</h1>
-  <div class="d-inline p-2 dropdown">
-    <button class="btn btn-secondary ddropdown-menu-right ropdown-toggle search-filter" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
-      City
-    </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
-  </div>
-  <div class="d-inline p-2 dropdown">
-    <button class="btn btn-secondary dropdown-menu-right dropdown-toggle search-filter" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
-      Dates
-    </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-      <a class="dropdown-item" href="#">test2</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
-  </div>
-  <div class="d-inline p-2 dropdown">
-    <button class="btn btn-secondary dropdown-menu-left dropdown-toggle search-filter" type="button" id="dropdownMenuButton3" data-bs-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
-      Car Type
-      <%# <img src="../../assets/images/magnifying_glass.png" alt="magnifying class" width="500" height="200"> %>
-    </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
-      <a class="dropdown-item" href="#">Test3</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
-  </div>
-<p></p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Bootstrap Utility Classes</title>
+    <link rel="shortcut icon" href="data:image/x-icon;" type="image/x-icon">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
+  </head>
+  <body class="bg-light">
+
+    <!-- restaurant menu / checkout-->
+    <div class="container">
+      <div class="container">
+        <div class="row py-3">
+          <div class="col-md-6">
+            <h3>Search Results</h3>
+            <div class="form-inline">
+              <select class="form-inline search-filter">
+                  <option value="" disabled selected>City</option>
+                  <option>London</option>
+                  <option>San Francisco</option>
+              </select>
+              <input type="date" id="start" name="trip-start"
+                        value="2023-02-28"
+                        min="2023-01-01" max="2023-12-31" class="form-inline">
+              <select class="form-inline search-filter">
+                  <option value="" disabled selected>Car Type</option>
+                  <option>4x4</option>
+                  <option>Sedan</option>
+                  <option>MiniVan</option>
+                  <option>Sports Car</option>
+              </select>
+              <button type="submit" class="btn btn-primary search-filter">Search</button>
+            </div>
+            <!-- make a card -->
+            <div class="card p-3 my-3">
+              <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/invencible-001-1675635897.jpg?crop=1.00xw:1.00xh;0,0&resize=980:*" alt="lamborghini photo" width='250px' height='150px'>
+              <p><strong>2022 Lamborghini</strong></p>
+              <p><small>"Be sure to impress with this beauty!"</small></p>
+              <span><strong>£99/day</strong></span>
+            </div>
+
+            <!-- make a card -->
+            <div class="card p-3 my-3">
+              <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/invencible-001-1675635897.jpg?crop=1.00xw:1.00xh;0,0&resize=980:*" alt="lamborghini photo" width='250px' height='150px'>
+              <p><strong>2022 Lamborghini</strong></p>
+              <p><small>"Be sure to impress with this beauty!"</small></p>
+              <span><strong>£99/day</strong></span>
+            </div>
+
+
+            <!-- make a card -->
+            <div class="card p-3 my-3">
+              <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/invencible-001-1675635897.jpg?crop=1.00xw:1.00xh;0,0&resize=980:*" alt="lamborghini photo" width='250px' height='150px'>
+              <p><strong>2022 Lamborghini</strong></p>
+              <p><small>"Be sure to impress with this beauty!"</small></p>
+              <span><strong>£99/day</strong></span>
+            </div>
+
+
+            <!-- /menu -->
+          </div>
+
+          <div class="col-md-6">
+            <!-- checkout -->
+            <div class="container p-3" style='background-color: orange; height: 800px;'>
+              <img id="map" src='https://traista.com/wp-content/uploads/2018/03/London-Google-map.png'/>
+            </div>
+            <!-- /checkout -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JavaScript library -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </body>
+
 
 <% @cars.each do |car| %>
-<ul>
+<%# <ul> %>
 <li> <%= link_to car.model, car_path(car) %> </li>
 </ul>
 <% end %>
+</html>

@@ -1,5 +1,17 @@
 .search-filter {
+  width: auto;
+  border-radius: 10px;
+  background-color: lightgray;
+}
+
+.search-button {
+  background-color: rgb(245, 111, 8);
   border: 1px solid black;
   box-shadow: 1px 2px 2px black;
-  border-radius: 25px;
+  border-radius: 15px;
+}
+
+#map {
+  height: 100%;
+  width: 100%;
 }
