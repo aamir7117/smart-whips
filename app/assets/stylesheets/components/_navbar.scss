@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: rgba(0, 0, 0, 0);
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -13,29 +13,17 @@
 
 
 h1 {
-  color: #ddd;
+  color: #f7c75f;
   font-family: 'Brush Script MT', cursive;
-}
-
-.navbar-home {
-  position: absolute;
-  width: 100%;
-}
-
-button {
-  color: #04AA6D;
-  position: fixed;
-  left: 1280px;
-  top: 20px;
 }
 
 
 .nav-link {
-  color: gray !important;
+  color: rgb(218, 173, 101) !important;
 }
 
 .nav-link:hover {
-  color: #04AA6D !important;
+  color: #d63e3e !important;
 }
 
 .topnav {
@@ -46,7 +34,7 @@ button {
 /* Style the links inside the navigation bar */
 .topnav a {
   float: right;
-  color: white !important;
+  color: rgb(61, 244, 213) !important;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -56,7 +44,7 @@ button {
 
 /* Change the color of links on hover */
 .topnav a:hover {
-  background-color: #ddd;
+  background-color: #2ff7b5;
   color: rgb(255, 255, 255);
   font-size: larger;
 }
