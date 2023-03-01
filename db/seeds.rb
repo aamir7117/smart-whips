@@ -10,7 +10,7 @@ Car.destroy_all
 User.destroy_all
 
 puts 'creating fake records'
-user = User.new(email: 'testing123@gmail.com', password: 'testing', first_name: 'aamir', last_name: 'shaikh', role: 'owner')
+user = User.new( username: 'testman', email: 'testing123@gmail.com', password: 'testing', first_name: 'aamir', last_name: 'shaikh', role: 'owner')
 user.save
 car1 = Car.new(model: 'Tesla', description: 'good', location: 'newham', price: 45)
 car1.user = user
