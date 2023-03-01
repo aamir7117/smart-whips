@@ -13,7 +13,7 @@ puts 'creating fake records'
 user = User.new( username: 'testman', email: 'testing123@gmail.com', password: 'testing', first_name: 'aamir', last_name: 'shaikh', role: 'owner')
 user.save
 
-car1 = Car.new(model: 'Tesla', description: 'good', location: 'newham', price: 45)
+car1 = Car.new(model: 'Tesla', description: 'This car is fantastic. You know you want to rent it!', location: 'newham', price: 45)
 car1.user = user
 # debugger
 car1.photo.attach(
@@ -22,7 +22,7 @@ car1.photo.attach(
 )
 car1.save
 
-car2 = Car.new(model: 'Ferrari', description: 'bad', location: 'peckham', price: 30)
+car2 = Car.new(model: 'Ferrari', description: 'This car is horrible. Probably stay away from it', location: 'peckham', price: 30)
 car2.user = user
 car2.photo.attach(
   io:  File.open(File.join(Rails.root,'app/assets/images/image.png')),
@@ -30,7 +30,7 @@ car2.photo.attach(
 )
 car2.save
 
-car3 = Car.new(model: 'Lamborghini', description: 'fair', location: 'brixton', price: 24)
+car3 = Car.new(model: 'Lamborghini', description: 'This car is great go for it!', location: 'brixton', price: 24)
 car3.user = user
 car3.photo.attach(
   io:  File.open(File.join(Rails.root,'app/assets/images/image.png')),
