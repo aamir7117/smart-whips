@@ -29,3 +29,11 @@
   flex: 1 0 50% 50%;
   width: 100%;
 }
+
+.button {
+  position: absolute;
+  left: 860px;
+  top: 115px;
+  width: 100px;
+  margin-left: -120.5px; /*104.5px is half of the button's width*/
+}
