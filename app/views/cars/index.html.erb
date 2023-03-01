@@ -35,13 +35,13 @@
                   <option>MiniVan</option>
                   <option>Sports Car</option>
               </select>
-              <button type="submit" class="btn btn-secondary col-0.5 button"><label><i class="fa fa-search"></i> Search</label></button>
+              <button type="submit" class="btn btn-secondary col-0.5"><label><i class="fa fa-search"></i> Search</label></button>
             </div>
             <% @cars.each do |car| %>
-            <div class="search-card p-3 my-3 search-card">
+            <div class="search-card p-3 my-3">
               <div class="col-50">
-                <%=link_to cl_image_tag car.photo.key, width: 200 if car.photo.key%> <%= image_tag car.image_url, width: 200 if car.image_url %>
-                <div class="card">
+                <%=cl_image_tag car.photo.key, width: 275 if car.photo.key%> <%= image_tag car.image_url, width: 200 if car.image_url %>
+                <div class="card w-100 p-3">
                   <p><strong><%= link_to car.model, car_path(car) %></strong></p>
                   <p>⭐⭐⭐⭐⭐</p>
                   <p><small><%= car.description %></small></p>
@@ -53,7 +53,6 @@
             <!-- /menu -->
           </div>
 
-<%= link_to "Add new car", new_car_path %>
           <div class="col-md-6"">
             <!-- checkout -->
             <div class="container p-3 search-card" style='background-color: orange; height: 870px;'>
@@ -68,3 +67,5 @@
     <!-- Bootstrap JavaScript library -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   </body>
+
+<%= link_to "Add new car", new_car_path %>

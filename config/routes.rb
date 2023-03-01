@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'bookings/show'
   root to: "pages#home"
   get '/cars', to: "cars#index"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
@@ -15,5 +14,9 @@ Rails.application.routes.draw do
 
   resources :cars do
     resources :bookings, only: %i[new create show index]
+  end
+
+  resources :users, only: :new do
+    resources :bookings, only: %i[index]
   end
 end

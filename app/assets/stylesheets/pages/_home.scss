@@ -1,9 +1,12 @@
 // Specific CSS for your home-page
 .home-banner {
+  width: 100vw;
   height: 100vh;
-  width: 1500px;
   background-attachment: fixed;
   background-size: 100% 100%;
+  position: absolute;
+  top: 0px;
+  z-index: -2;
 }
 
 .heading {
@@ -25,4 +28,37 @@
   font-size: 60px;
   color: antiquewhite;
   font-style: unset;
+}
+
+.search-btn {
+  display: inline !important;
+}
+
+h1 {
+  font-size: 50px;
+  color: rgb(235, 166, 76);
+}
+
+.form-inline {
+  color: rgb(42, 113, 44);
+  background-color: rgb(246, 141, 3);
+  border-radius: 100px;
+  padding: 10px;
+  margin: 4px;
+}
+
+a {
+  text-decoration: none;
+  transition: 2s;
+}
+
+a:-webkit-any-link {
+  color: -webkit-link;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #14826a;
+  font-size: 3rem;
 }
