@@ -56,9 +56,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_01_113532) do
 
   create_table "cars", force: :cascade do |t|
     t.string "model"
-    t.text "description"
-    t.string "location"
-    t.integer "price"
+    t.boolean "availability"
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
