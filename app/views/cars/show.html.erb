@@ -1,0 +1,6 @@
+
+<h1><%= @car.model %></h1>
+<%= image_tag @car.image_url, width: 300 if @car.image_url %>
+<%= cl_image_tag @car.photo.key, width: 300 if @car.photo.key %>
+<p><%= link_to 'book this car', new_car_booking_path(params[:id]) %></p>
+<p><%= link_to 'back to our cars', cars_path %></p>

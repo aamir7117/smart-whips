@@ -1,0 +1,39 @@
+.search-filter {
+  width: auto;
+  border-radius: 10px;
+  background-color: lightgray;
+}
+
+.search-button {
+  background-color: rgb(245, 111, 8);
+  border: 1px solid black;
+  box-shadow: 1px 2px 2px black;
+  border-radius: 15px;
+}
+
+#map {
+  height: 100%;
+  width: 100%;
+}
+
+.search-card {
+  background-color: orange;
+  border: 1px solid black;
+  box-shadow: 1px 2px 2px black;
+  border-radius: 15px;
+}
+
+.col-50 {
+  background-color: white;
+  display: flex;
+  flex: 1 0 50% 50%;
+  width: 100%;
+}
+
+.button {
+  position: absolute;
+  left: 860px;
+  top: 115px;
+  width: 100px;
+  margin-left: -120.5px; /*104.5px is half of the button's width*/
+}
