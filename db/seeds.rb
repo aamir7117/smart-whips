@@ -38,4 +38,20 @@ car3.photo.attach(
 )
 car3.save
 
+
+10.times do
+  Car.new(
+    model: ,
+    description: ,
+    location: ,
+    price: ,
+  )
+end
+Car.each do |car|
+  car.user = user
+  car.photo.attach(
+    io: File.open(File.join(Rails.root, 'app/assets/images/image.png')),
+    filename: 'image.jpg'
+  )
+end
 puts 'finished'
