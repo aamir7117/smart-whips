@@ -1,7 +1,5 @@
-<h1>Car#show</h1>
-<p>Find me in app/views/car/show.html.erb</p>
 
-<%= @car.model %>
+<h1><%= @car.model %></h1>
 <%= image_tag @car.image_url, width: 300 if @car.image_url %>
 <%= cl_image_tag @car.photo.key, width: 300 if @car.photo.key %>
 <p><%= link_to 'book this car', new_car_booking_path(params[:id]) %></p>
