@@ -1,48 +1,43 @@
 
-<h1><%= @car.model %></h1>
-<%= image_tag @car.image_url, width: 300 if @car.image_url %>
-<%= cl_image_tag @car.photo.key, width: 300 if @car.photo.key %>
-<p><%= link_to 'book this car', new_car_booking_path(params[:id]) %></p>
-<p><%= link_to 'back to our cars', cars_path %></p>
 
-
-<%# <h1> SmartWhips </h1>
-<button type="button" class="btn btn-outline-dark btn-lg">Sign in</button> %>
-
-<%# <div> class="card" style="max-width:1100px;>
-
-</div> %>
-
-<div class="background-container">
+<div class="background-container-show">
   <div class="container pt-10 ">
 
-  <div class="card">
+  <div class="card-show">
 
-    <div class="card-body">
+    <div class="card-body-show">
 
       <div class="d-flex justify-content-between">
         <div>
-          <h5 class="card-title">Lamborghini Gallardo</h5>
+        <h1 class="header-show"> <%= @car.model %></h1>
+          <%# <h5 class="card-title">Lamborghini Gallardo</h5> %>
           <p class="user">By user ...</p>
         </div>
-        <a href="/"> Back to browsing</a>
+        <p class="para-show"><%= link_to 'Back to our cars', cars_path %></p>
       </div>
-      <div class="card-car-body">
+      <div class="card-car-body-show">
 
       </div>
-      <div class="card-spec" style="width: 25rem;">
-      <%= image_tag "" %>
-      <div class="card-pics" style="width: 25rem;">
+      <div class="card-spec-show" style="width: 25rem;">
+      <%= image_tag @car.image_url, class: "image" if @car.image_url %>
+      <%= cl_image_tag @car.photo.key, class: "image" if @car.photo.key %>
+      <div class="card-pics-show" style="width: 25rem;">
+      <img id="map-small" src="https://traista.com/wp-content/uploads/2018/03/London-Google-map.png">
        </div>
+      </div>
+      <div class="card-details-show" style="width: 50rem;">
+      <div>
+        <p class="para-specs">Car specs</p>
+      </div>
+        <p class="para-descript">Owners description</p>
+
+      <div class="card-price-show" style="width: 50rem;">
+
+      <div>
+     <p class="para-book-now"><%= link_to 'Book Now', new_car_booking_path(params[:id]) %></p>
 
       </div>
-      <div class="card-details" style="width: 50rem;">
-        <p>Car specs</p>
-      <div class="card-price" style="width: 50rem;">
-      <div>
-      <p class="Book">Book Now</p>
-      </div>
-      <p class="Book">price</p>
+      <p>Price</p>
       </div>
 
       <%# <div class="card-specs">

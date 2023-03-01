@@ -2,7 +2,7 @@
   border: red 1px solid;
 }
 
-h1 {
+.header-show {
   color: rgb(164, 39, 39);
   font-family: 'Dancing Script', cursive;
   font-style: normal;
@@ -11,27 +11,56 @@ h1 {
   line-height: 36px;
 }
 
-button {
-  position: absolute;
-  left: 1280px;
-  top: 20px;
-}
+// button {
+//   position: absolute;
+//   left: 1280px;
+//   top: 20px;
+// }
 
-.background-container{
+.background-container-show {
   background-color: white;
   height: 100vh;
 }
 
-p {
+.para-book-now {
   color: rgb(65, 64, 64);
   font-family: 'IBM Plex Sans', sans-serif;
   font-size: 20px;
   line-height: 26px;
 }
 
-h5 {
+.para-show {
   color: rgb(65, 64, 64);
-  font-family: 'Lora', serif;
-  font-size: 30px;
-  line-height: 36px;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 20px;
+  line-height: 26px;
 }
+
+.para-specs {
+  color: rgb(65, 64, 64);
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.para-specs {
+  color: rgb(65, 64, 64);
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 20px;
+  line-height: 26px;
+}
+.para-descript {
+  color: rgb(65, 64, 64);
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 20px;
+  line-height: 26px;
+}
+
+
+
+// h5 {
+//   color: rgb(65, 64, 64);
+//   font-family: 'Lora', serif;
+//   font-size: 30px;
+//   line-height: 36px;
+// }
