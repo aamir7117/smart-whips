@@ -1,6 +1,52 @@
 
-<h1><%= @car.model %></h1>
-<%= image_tag @car.image_url, width: 300 if @car.image_url %>
-<%= cl_image_tag @car.photo.key, width: 300 if @car.photo.key %>
-<p><%= link_to 'book this car', new_car_booking_path(params[:id]) %></p>
-<p><%= link_to 'back to our cars', cars_path %></p>
+
+<div class="background-container-show">
+  <div class="container pt-10 ">
+
+  <div class="card-show">
+
+    <div class="card-body-show">
+
+      <div class="d-flex justify-content-between">
+        <div>
+        <h1 class="header-show"> <%= @car.model %></h1>
+          <%# <h5 class="card-title">Lamborghini Gallardo</h5> %>
+          <p class="user">By user ...</p>
+        </div>
+        <p class="para-show"><%= link_to 'Back to our cars', cars_path %></p>
+      </div>
+      <div class="card-car-body-show">
+
+      </div>
+      <div class="card-spec-show" style="width: 25rem;">
+      <%= image_tag @car.image_url, class: "image" if @car.image_url %>
+      <%= cl_image_tag @car.photo.key, class: "image" if @car.photo.key %>
+      <div class="card-pics-show" style="width: 25rem;">
+      <img id="map-small" src="https://traista.com/wp-content/uploads/2018/03/London-Google-map.png">
+       </div>
+      </div>
+      <div class="card-details-show" style="width: 50rem;">
+      <div>
+        <p class="para-specs">Car specs</p>
+      </div>
+        <p class="para-descript">Owners description</p>
+
+      <div class="card-price-show" style="width: 50rem;">
+
+      <div>
+     <p class="para-book-now"><%= link_to 'Book Now', new_car_booking_path(params[:id]) %></p>
+
+      </div>
+      <p>Price</p>
+      </div>
+
+      <%# <div class="card-specs">
+        <div class="card-specs-body">
+          <h5 class="card-specs-title">Car specs</h5>
+        </div>
+      </div> %>
+
+    </div>
+  </div>
+</div>
+</div>
