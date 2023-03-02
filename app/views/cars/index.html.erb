@@ -29,8 +29,8 @@
       <div class="card-c">
         <%= cl_image_tag car.photo.key %>
         <div class="card-c-info">
-          <p>⭐⭐⭐⭐⭐</p><p><strong><%= link_to car.model, car_path(car) %></strong></p>
-          <p><small><%= car.description[0.10] %></small></p>
+          <p>⭐⭐⭐⭐⭐</p>
+          <p><strong><%= link_to car.model, car_path(car) %></strong></p>
           <span><strong>£<%= car.price%>/day</strong></span>
         </div>
       </div>
