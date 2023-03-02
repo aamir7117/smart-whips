@@ -1,9 +1,9 @@
 <div class="background-container-show">
   <div class="container pt-10 ">
 
-  <div class="card-show">
+  <div class="">
 
-    <div class="card-body-show">
+    <div class="">
 
       <div class="d-flex justify-content-between orange-box">
         <div>
@@ -13,15 +13,13 @@
         </div>
         <p class="para-show"><%= link_to 'Back to our cars', cars_path, class:"btn btn-default" %></p>
       </div>
-      <div class="card-car-body-show">
+      <div class="">
 
       </div>
-      <div class="card-spec-show">
+      <div class="">
 
-      <%= cl_image_tag @car.photo.key, width: 1200, height: 600, crop: :fill, class: "image" if @car.photo.key %>
-      <%# <div class="card-spec-show" style="width: 25rem;"> %>
-      <%# <%= cl_image_tag @car.photo.key, class: "image" if @car.photo.key %>
-      <div class="card-pics-show" style="width: 25rem;">
+      <%= cl_image_tag @car.photo.key, width: 1200, height: 600, crop: :fill, class: "" if @car.photo.key %>
+      <div class="" style="width: 25rem;">
               <div style="width: 100%; height: 200px;"
               data-controller="map"
               data-map-markers-value="<%= @marker.to_json %>"
@@ -29,7 +27,7 @@
             </div>
        </div>
       </div>
-      <div class="card-details-show">
+      <div class="">
 
     </div>
 
@@ -46,7 +44,7 @@
                   <p><%= @car.description  %> <%= @car.description %> <%= @car.description %> <%= @car.description %></p>
               </div>
             <div class="col-4">
-               <div class="card-price-show">
+               <div class="">
                   <p class="para-book-now">
                   <%= link_to 'Book Now', new_car_booking_path(params[:id]), class:"btn btn-default" %>
                   </p>
