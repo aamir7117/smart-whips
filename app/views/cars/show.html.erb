@@ -19,8 +19,14 @@
       <div class="card-spec-show">
 
       <%= cl_image_tag @car.photo.key, width: 1200, height: 600, crop: :fill, class: "image" if @car.photo.key %>
+      <%# <div class="card-spec-show" style="width: 25rem;"> %>
+      <%# <%= cl_image_tag @car.photo.key, class: "image" if @car.photo.key %>
       <div class="card-pics-show" style="width: 25rem;">
-      <img id="map-small" src="https://traista.com/wp-content/uploads/2018/03/London-Google-map.png">
+              <div style="width: 100%; height: 200px;"
+              data-controller="map"
+              data-map-markers-value="<%= @marker.to_json %>"
+              data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+            </div>
        </div>
       </div>
       <div class="card-details-show">
