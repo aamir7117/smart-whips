@@ -72,22 +72,24 @@
 
 
 .card-c {
-  background-size: cover;
-  background-position: center;
-  height: 140px;
+  width: 360px;
+  background: white;
   border-radius: 20px;
-  box-shadow: 0 0 10px $gray;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+  box-shadow: 0 0 10px $light-gray;
   font-size: 22px;
-  color: white;
   font-weight: bolder;
-  text-shadow: 0 0 10px $gray;
+  text-shadow: 0 0 10px $light-gray;
 }
 
 .card-c img {
-  width: 10;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.card-c-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
 }
 
 .body-text {

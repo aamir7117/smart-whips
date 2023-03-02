@@ -26,17 +26,13 @@
 
   <div class="cards">
     <% (@cars+@cars).each do |car| %>
-      <div class="row">
-
-        <div class="card-c" style="background-image: url(<%= cloudinary_url(car.photo.key) %>); background-blend-mode: lighten;">
-        </div>
-
-        <div class="card-c">
+      <div class="card-c">
+        <%= cl_image_tag car.photo.key %>
+        <div class="card-c-info">
           <p>⭐⭐⭐⭐⭐</p><p><strong><%= link_to car.model, car_path(car) %></strong></p>
           <p><small><%= car.description[0.10] %></small></p>
           <span><strong>£<%= car.price%>/day</strong></span>
         </div>
-
       </div>
     <% end %>
   </div>
@@ -44,12 +40,6 @@
   <!-- Change the token below (https://www.mapbox.com/account/access-tokens/) -->
   <img id="map" src='https://traista.com/wp-content/uploads/2018/03/London-Google-map.png'/>
 </div>
-<<<<<<< HEAD
-
-
-
 
 
 <%= link_to "Add new car", new_car_path %>
-=======
->>>>>>> master
