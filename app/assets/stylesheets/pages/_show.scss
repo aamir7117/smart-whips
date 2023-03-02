@@ -3,8 +3,8 @@
 // }
 
 .header-show {
-  color: rgb(164, 39, 39);
-  font-family: 'Dancing Script', cursive;
+  color: $gray;
+  font-family: $headers-font;
   font-style: normal;
   font-weight: 700;
   font-size: 30px;
@@ -18,39 +18,39 @@
 // }
 
 .background-container-show {
-  background-color: white;
+  background-color: $light-gray;
   height: 100vh;
 }
 
 .para-book-now {
-  color: rgb(65, 64, 64);
+  color: $gray;
   font-family: 'IBM Plex Sans', sans-serif;
   font-size: 20px;
   line-height: 26px;
 }
 
 .para-show {
-  color: rgb(65, 64, 64);
+  color: $gray;
   font-family: 'IBM Plex Sans', sans-serif;
   font-size: 20px;
   line-height: 26px;
 }
 
 .para-specs {
-  color: rgb(65, 64, 64);
+  color: $gray;
   font-family: 'IBM Plex Sans', sans-serif;
   font-size: 20px;
   line-height: 26px;
 }
 
 .para-specs {
-  color: rgb(65, 64, 64);
+  color: $gray;
   font-family: 'IBM Plex Sans', sans-serif;
   font-size: 20px;
   line-height: 26px;
 }
 .para-descript {
-  color: rgb(65, 64, 64);
+  color: $gray;
   font-family: 'IBM Plex Sans', sans-serif;
   font-size: 20px;
   line-height: 26px;
@@ -81,7 +81,7 @@
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
+  border: 1px solid $gray;
   border-radius: 0.25rem;
 }
 .card > hr {
@@ -133,8 +133,8 @@
 .card-header {
   padding: 0.5rem 1rem;
   margin-bottom: 0;
-  background-color: rgba(0, 0, 0, 0.03);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  background-color: $gray;
+  border-bottom: 1px solid $gray;
 }
 .card-header:first-child {
   border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
@@ -142,8 +142,8 @@
 
 .card-footer {
   padding: 0.5rem 1rem;
-  background-color: rgba(0, 0, 0, 0.03);
-  border-top: 1px solid rgba(0, 0, 0, 0.125);
+  background-color: $gray;
+  border-top: 1px solid $gray;
 }
 .card-footer:last-child {
   border-radius: 0 0 calc(0.25rem - 1px) calc(0.25rem - 1px);

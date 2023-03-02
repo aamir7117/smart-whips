@@ -10,7 +10,7 @@
 }
 
 .heading {
-  color: antiquewhite;
+  color: $light-gray;
   text-align: center;
   display: flex;
   height: 100%;
@@ -25,8 +25,8 @@
 }
 
 .heading h1 {
-  font-size: 60px;
-  color: antiquewhite;
+  font-size: 90px;
+  color: $light-gray;
   font-style: unset;
 }
 
@@ -36,12 +36,12 @@
 
 h1 {
   font-size: 50px;
-  color: rgb(235, 166, 76);
+  color: $orange;
 }
 
 .form-inline {
-  color: rgb(42, 113, 44);
-  background-color: rgb(246, 141, 3);
+  color: $gray;
+  background-color: $orange;
   border-radius: 100px;
   padding: 10px;
   margin: 4px;
@@ -59,6 +59,5 @@ a:-webkit-any-link {
 }
 
 a:hover {
-  color: #14826a;
-  font-size: 3rem;
+  color: $blue;
 }
