@@ -9,7 +9,7 @@
         <div>
         <h1 class="header-show"> <%= @car.model %></h1>
           <%# <h5 class="card-title">Lamborghini Gallardo</h5> %>
-          <p class="user">By user ...</p>
+          <p class="user">owned by <%= @car.user.username %></p>
         </div>
         <p class="para-show"><%= link_to 'Back to our cars', cars_path %></p>
       </div>
@@ -17,7 +17,6 @@
 
       </div>
       <div class="card-spec-show" style="width: 25rem;">
-      <%= image_tag @car.image_url, class: "image" if @car.image_url %>
       <%= cl_image_tag @car.photo.key, class: "image" if @car.photo.key %>
       <div class="card-pics-show" style="width: 25rem;">
       <img id="map-small" src="https://traista.com/wp-content/uploads/2018/03/London-Google-map.png">
@@ -25,10 +24,11 @@
       </div>
       <div class="card-details-show" style="width: 50rem;">
       <div>
-        <p class="para-specs">Car specs</p>
+        <h2 class="para-specs">Car specs</h2>
+        <p><%= @car.description %> <%= @car.description %> <%= @car.description %></p>
       </div>
-        <p class="para-descript">Owners description</p>
-
+        <h2 class="para-descript">Owners description</h2>
+        <p><%= @car.description  %> <%= @car.description %> <%= @car.description %> <%= @car.description %></p>
       <div class="card-price-show" style="width: 50rem;">
 
       <div>
