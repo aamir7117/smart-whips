@@ -39,10 +39,11 @@ h1 {
   color: $orange;
 }
 
-.form-inline {
+.search-filters-background {
   color: $gray;
+  width: auto;
   background-color: $orange;
-  border-radius: 100px;
+  border-radius: 20px;
   padding: 10px;
   margin: 4px;
 }
