@@ -15,21 +15,47 @@ Car.destroy_all
 User.destroy_all
 
 puts 'creating fake records'
-user = User.new(email: 'testing123@gmail.com', password: 'testing', first_name: 'aamir', last_name: 'shaikh', role: 'owner')
+user = User.new( username: 'testman', email: 'testing123@gmail.com', password: 'testing', first_name: 'aamir', last_name: 'shaikh', role: 'owner')
 user.save
 
+<<<<<<< HEAD
 car1 = Car.new(model: 'Tesla', description: 'good', location: 'newham', price: 45)
 car1.photo.attach(io: file, filename: "car1.png", content_type: "image/png")
+=======
+car1 = Car.new(model: 'Tesla', description: 'This car is fantastic. You know you want to rent it!', location: 'newham', price: 45)
+>>>>>>> 5ff553609c448f1d5ba2256fc5acc46e12abbb03
 car1.user = user
+# debugger
+car1.photo.attach(
+  io:  File.open(File.join(Rails.root,'app/assets/images/image.png')),
+  filename: 'image.jpg'
+)
 car1.save
 
+<<<<<<< HEAD
 car2 = Car.new(model: 'Ferrari', description: 'bad', location: 'peckham', price: 30)
 car2.photo.attach(io: file, filename: "car2.png", content_type: "image/png")
+=======
+car2 = Car.new(model: 'Ferrari', description: 'This car is horrible. Probably stay away from it', location: 'peckham', price: 30)
+>>>>>>> 5ff553609c448f1d5ba2256fc5acc46e12abbb03
 car2.user = user
+car2.photo.attach(
+  io:  File.open(File.join(Rails.root,'app/assets/images/image.png')),
+  filename: 'image.jpg'
+)
 car2.save
 
+<<<<<<< HEAD
 car3 = Car.new(model: 'Lamborghini', description: 'fair', location: 'brixton', price: 24)
 car3.photo.attach(io: file, filename: "car3.png", content_type: "image/png")
+=======
+car3 = Car.new(model: 'Lamborghini', description: 'This car is great go for it!', location: 'brixton', price: 24)
+>>>>>>> 5ff553609c448f1d5ba2256fc5acc46e12abbb03
 car3.user = user
+car3.photo.attach(
+  io:  File.open(File.join(Rails.root,'app/assets/images/image.png')),
+  filename: 'image.jpg'
+)
 car3.save
+
 puts 'finished'

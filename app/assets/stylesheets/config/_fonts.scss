@@ -1,11 +1,16 @@
 // Import Google fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Dancing+Script&family=Dosis:wght@600&family=Tilt+Prism&display=swap');
 
 // Define fonts for body and headers
-$body-font: "Nunito", "Work Sans", "sans-serif";
-$headers-font: "Comfortaa", "Dancing Script", "sans-serif";
+$body-font: "Work Sans";
+$headers-font: "Dancing Script";
+// $background-color: rgb(240, 175, 61);
+// $text-color-1: black;
+// $text-color-2: gray;
+// $header-color: white;
+$light-border-color: white;
+// $shadow: black;
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {
