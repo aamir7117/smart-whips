@@ -43,4 +43,5 @@ cargallery = ['https://res.cloudinary.com/daaiz4ywy/image/upload/v1677756711/198
   car.save
 end
 
+
 puts 'finished'

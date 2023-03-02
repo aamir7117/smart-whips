@@ -1,7 +1,12 @@
-    <%= simple_form_for [@car, @booking] do |f| %>
-          <%= f.input :details, placeholder: 'Enter any additional details about your booking' %>
-          <%= f.input :rental_start, as: :date, html5: true %>
-          <%= f.input :rental_end, as: :date, html5: true %>
-          <%= f.submit class: "btn btn-flat" %>
-        <% end %>
-<p><%= link_to 'cancel booking', car_path(@car) %></p>
+<div class="container w-50">
+  <%= simple_form_for [@car, @booking] do |f| %>
+        <%= f.input :details, placeholder: 'Enter any additional details about your booking' %>
+        <%= f.input :rental_start, as: :date, html5: true %>
+        <%= f.input :rental_end, as: :date, html5: true %>
+        <%= f.submit class: "btn btn-flat btn-primary" %>
+      <% end %>
+</div>
+<div class="container w-50">
+<p></p>
+  <%= link_to 'Go Back', cars_path, class: "btn btn-flat btn-warning" %>
+</div>

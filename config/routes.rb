@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  # get "users", to: "pages#show"
+
   devise_for :users, path: 'users', path_names: {   sign_in: 'login',
                                                     sign_out: 'logout',
                                                     registration: 'register',
