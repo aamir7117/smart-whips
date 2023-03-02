@@ -1,6 +1,21 @@
-<h1>your previous bookings</h1>
-<ul>
-<% @bookings.each do |booking| %>
-<li> <%= link_to booking.car.model, car_booking_path(:car_id, booking) %> <%= booking.details %> from <%=booking.rental_start.to_formatted_s(:long)  %> to <%= booking.rental_end.to_formatted_s(:long)   %></li>
-<% end %>
-</ul>
+<div class="container">
+  <h1>Your bookings</h1>
+
+  <div class="cards-booking">
+    <% @bookings.each do |booking| %>
+      <div class="card-booking">
+        <%= cl_image_tag booking.car.photo.key %>
+        <div class="card-booking-infos">
+          <h2><%= booking.car.model %></h2>
+          <p>
+            <%= booking.details %>
+            <%=booking.rental_start.to_formatted_s(:long) %>
+            to <%= booking.rental_end.to_formatted_s(:long) %>
+            (<%= booking.number_of_days %> days)
+          </p>
+          <p>Price paid: £<%= booking.total_price %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
