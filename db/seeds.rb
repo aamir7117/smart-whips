@@ -14,6 +14,8 @@ puts 'creating fake records'
 user = User.new( username: 'testman', email: 'testing123@gmail.com', password: 'testing', first_name: 'aamir', last_name: 'shaikh', role: 'owner')
 user.save
 
+locations = ['New York City', 'London', 'Milan', 'Paris', 'Houston', 'San Francisco', 'Los Angeles', 'Chicago', 'Toronto', 'Glasgow']
+
 cargallery = ['https://res.cloudinary.com/daaiz4ywy/image/upload/v1677756711/1988_Yugo_GV_in_Blue__front_left_ehggtc.jpg',
               'https://res.cloudinary.com/daaiz4ywy/image/upload/v1677756711/Lamborghini_Aventador_LP700-4_Orange_grealx.jpg',
               'https://res.cloudinary.com/daaiz4ywy/image/upload/v1677756709/vehicle_ad_standard_image_71b6cf608f4ca529b2ea72b5f79ec96e_hm3zoa.jpg',
@@ -30,7 +32,7 @@ cargallery = ['https://res.cloudinary.com/daaiz4ywy/image/upload/v1677756711/198
   car = Car.new(
     model: Faker::Vehicle.make_and_model,
     description: Faker::Lorem.paragraph(sentence_count: 5, supplemental: true),
-    location: Faker::Address.city,
+    location: locations.shuffle!.pop,
     price: Faker::Number.between(from: 30, to: 100)
   )
   car.user = user
