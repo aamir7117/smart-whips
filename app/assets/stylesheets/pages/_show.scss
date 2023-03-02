@@ -196,3 +196,14 @@
 .link {
   text-decoration: none;
 }
+
+body {
+ background-image: url("https://pragaglobal.com/wp-content/themes/praga/assets/img/home/bohema-home-2.jpg");
+  width: 100vw;
+  height: 100vh;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  position: absolute;
+  top: 0px;
+  z-index: -2;
+}
