@@ -40,7 +40,8 @@
             <% @cars.each do |car| %>
             <div class="search-card p-3 my-3 search-card">
               <div class="col-50">
-                <%=link_to cl_image_tag car.photo.key, width: 200 if car.photo.key%> <%= image_tag car.image_url, width: 200 if car.image_url %>
+                <%=link_to cl_image_tag car.photo.key, width: 200 if car.photo.key %>
+                <%#= image_tag car.image_url, width: 200 if car.image_url %>
                 <div class="card">
                   <p><strong><%= link_to car.model, car_path(car) %></strong></p>
                   <p>⭐⭐⭐⭐⭐</p>
@@ -54,7 +55,7 @@
           </div>
 
 <%= link_to "Add new car", new_car_path %>
-          <div class="col-md-6"">
+          <div class="col-md-6">
             <!-- checkout -->
             <div class="container p-3 search-card" style='background-color: orange; height: 870px;'>
               <img id="map" src='https://traista.com/wp-content/uploads/2018/03/London-Google-map.png'/>

@@ -5,6 +5,11 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+require "open-uri"
+
+file = URI.open("https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80")
+
 puts 'wiping db clean'
 Car.destroy_all
 User.destroy_all
@@ -12,13 +17,19 @@ User.destroy_all
 puts 'creating fake records'
 user = User.new(email: 'testing123@gmail.com', password: 'testing', first_name: 'aamir', last_name: 'shaikh', role: 'owner')
 user.save
+
 car1 = Car.new(model: 'Tesla', description: 'good', location: 'newham', price: 45)
+car1.photo.attach(io: file, filename: "car1.png", content_type: "image/png")
 car1.user = user
 car1.save
+
 car2 = Car.new(model: 'Ferrari', description: 'bad', location: 'peckham', price: 30)
+car2.photo.attach(io: file, filename: "car2.png", content_type: "image/png")
 car2.user = user
 car2.save
+
 car3 = Car.new(model: 'Lamborghini', description: 'fair', location: 'brixton', price: 24)
+car3.photo.attach(io: file, filename: "car3.png", content_type: "image/png")
 car3.user = user
 car3.save
 puts 'finished'
