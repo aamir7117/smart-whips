@@ -11,6 +11,11 @@
   width: 40px;
 }
 
+.title {
+  position: fixed;
+  position: relative;
+  left: 40px
+}
 
 h1 {
   color: $orange;
@@ -18,13 +23,13 @@ h1 {
 }
 
 
-// .nav-link {
-//   color: rgb(218, 173, 101) !important;
-// }
+.nav-link {
+  color: rgb(218, 173, 101) !important;
+}
 
-// .nav-link:hover {
-//   color: #d63e3e !important;
-// }
+.nav-link:hover {
+  color: #d63e3e !important;
+}
 
 .topnav {
   background-color: $orange;
