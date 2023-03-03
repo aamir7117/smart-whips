@@ -1,6 +1,7 @@
 class CarsController < ApplicationController
   def index
     params[:query].present? ? @cars = Car.search_by_location(params[:query]) : @cars = Car.all
+    @car = Car.new
     @markers = @cars.geocoded.map do |car|
       {
         lat: car.latitude,
