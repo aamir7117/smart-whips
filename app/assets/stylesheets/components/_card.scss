@@ -92,7 +92,7 @@
   display: flex;
   align-items: center;
   border-radius: 20px;
-  color: white;
+  color: $gray;
 }
 
 .card-booking img {
@@ -100,9 +100,15 @@
   width: 300px;
   object-fit: cover;
 }
+
 .card-booking .card-booking-infos {
   padding: 32px;
-  background: $orange;
+  background: $white;
+}
+
+#header-booking-card {
+  color: $orange;
+  text-shadow: 1 1 15px rgba(0, 0, 0, 0.2);
 }
 
 .cards-booking {

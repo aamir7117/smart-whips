@@ -19,11 +19,11 @@
       <div class="card-c">
         <%= cl_image_tag car.photo.key %>
         <div class="card-c-info">
-          <p>⭐⭐⭐⭐⭐</p>
-          <p><strong><%= link_to car.model, car_path(car) %></strong></p>
+          <p><strong><%= link_to car.model, car_path(car), id: "car-name-search-card" %></strong></p>
+          <%# <p>⭐⭐⭐⭐⭐</p> %>
           <span><strong>£<%= car.price%>/day</strong></span>
         </div>
-        <p class="h5"><%= car.description %></p>
+        <p id="car-desc"><%= car.description %></p>
       </div>
     <% end %>
   </div>
