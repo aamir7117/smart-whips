@@ -13,10 +13,10 @@ Rails.application.routes.draw do
                                                     sign_up: 'new_user' }
 
   resources :cars do
-    resources :bookings, only: %i[new create show index]
+    resources :bookings, only: %i[new create]
   end
 
   resources :users, only: :new do
-    resources :bookings, only: %i[index]
+    resources :bookings, only: %i[index show]
   end
 end
