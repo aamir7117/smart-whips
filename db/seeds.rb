@@ -16,7 +16,7 @@ user2 = User.create(username: 'Aamir the Emir', email: 'testing@gmail.com', pass
 
 users = [user1, user2]
 
-locations = ['Rome', 'London', 'Milan', 'Paris', 'Vienna', 'Madrid', 'Hamburg', 'Frankfurt', 'Bern', 'Glasgow']
+locations = ['Rome', 'London', 'Milan', 'Paris', 'Vienna', 'Madrid', 'Hamburg', 'Frankfurt', 'Bern']
 
 # cargallery = ['https://res.cloudinary.com/daaiz4ywy/image/upload/v1677756711/1988_Yugo_GV_in_Blue__front_left_ehggtc.jpg',
 #               'https://res.cloudinary.com/daaiz4ywy/image/upload/v1677756711/Lamborghini_Aventador_LP700-4_Orange_grealx.jpg',
@@ -34,7 +34,7 @@ car1 = Car.new(
   model: 'Jaguar XJ',
   description: Faker::Lorem.paragraph(sentence_count: 5, supplemental: true),
   location: locations.shuffle!.pop,
-  price: Faker::Number.between(from: 30, to: 100)
+  price: Faker::Number.between(from: 400, to: 800)
 )
 car1.user = users.sample
 car1.photo.attach(
@@ -47,7 +47,7 @@ car2 = Car.new(
   model: 'Porsche Panamera',
   description: Faker::Lorem.paragraph(sentence_count: 5, supplemental: true),
   location: 'Kelvingrove, Glasgow',
-  price: Faker::Number.between(from: 30, to: 100)
+  price: Faker::Number.between(from: 400, to: 800)
 )
 car2.user = users.sample
 car2.photo.attach(
@@ -60,7 +60,7 @@ car3 = Car.new(
   model: "Bentley Bentayga",
   description: Faker::Lorem.paragraph(sentence_count: 5, supplemental: true),
   location: 'Milan',
-  price: Faker::Number.between(from: 30, to: 100)
+  price: Faker::Number.between(from: 400, to: 800)
 )
 car3.user = users.sample
 car3.photo.attach(
@@ -73,7 +73,7 @@ car4 = Car.new(
   model: "Rolls-Royce Wraith",
   description: Faker::Lorem.paragraph(sentence_count: 5, supplemental: true),
   location: 'Yoker, Glasgow',
-  price: Faker::Number.between(from: 30, to: 100)
+  price: Faker::Number.between(from: 400, to: 800)
 )
 car4.user = users.sample
 car4.photo.attach(
@@ -85,8 +85,8 @@ car4.save
 car5 = Car.new(
   model: "BMW 7 Series",
   description: Faker::Lorem.paragraph(sentence_count: 5, supplemental: true),
-  location: locations.shuffle!.pop,
-  price: Faker::Number.between(from: 30, to: 100)
+  location: 'Paisley, Glasgow',
+  price: Faker::Number.between(from: 400, to: 800)
 )
 car5.user = users.sample
 car5.photo.attach(
@@ -99,7 +99,7 @@ car6 = Car.new(
   model: "Audi A8",
   description: Faker::Lorem.paragraph(sentence_count: 5, supplemental: true),
   location: locations.shuffle!.pop,
-  price: Faker::Number.between(from: 30, to: 100)
+  price: Faker::Number.between(from: 400, to: 800)
 )
 car6.user = users.sample
 car6.photo.attach(
@@ -112,7 +112,7 @@ car7 = Car.new(
   model: "Bentley Continental GT",
   description: Faker::Lorem.paragraph(sentence_count: 5, supplemental: true),
   location: locations.shuffle!.pop,
-  price: Faker::Number.between(from: 30, to: 100)
+  price: Faker::Number.between(from: 400, to: 800)
 )
 car7.user = users.sample
 car7.photo.attach(
@@ -125,7 +125,7 @@ car8 = Car.new(
   model: "Rolls-Royce Phantom",
   description: Faker::Lorem.paragraph(sentence_count: 5, supplemental: true),
   location: locations.shuffle!.pop,
-  price: Faker::Number.between(from: 30, to: 100)
+  price: Faker::Number.between(from: 400, to: 800)
 )
 car8.user = users.sample
 car8.photo.attach(
@@ -138,7 +138,7 @@ car9 = Car.new(
   model: "Mercedes-Benz S Class",
   description: Faker::Lorem.paragraph(sentence_count: 5, supplemental: true),
   location: 'Hamburg',
-  price: Faker::Number.between(from: 30, to: 100)
+  price: Faker::Number.between(from: 400, to: 800)
 )
 car9.user = users.sample
 car9.photo.attach(
@@ -151,7 +151,7 @@ car10 = Car.new(
   model: "Range Rover",
   description: Faker::Lorem.paragraph(sentence_count: 5, supplemental: true),
   location: 'Gorbals, Glasgow',
-  price: Faker::Number.between(from: 30, to: 100)
+  price: Faker::Number.between(from: 400, to: 800)
 )
 car10.user = users.sample
 car10.photo.attach(

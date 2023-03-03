@@ -1,30 +1,16 @@
 <h3 style="display: flex; justify-content: center;"><em>Our Fine Selection of Motor Vehicles</em></h3>
   <div class="heading">
-    <div class="search-filters-background" >
-          <div>
-        <%= form_with url: cars_path, method: :get, class: "d-flex form-inline" do %>
-        <%= text_field_tag :query,
-        params[:query],
-        class: "form-control",
-        placeholder: "Find a car in a city near you!"
-        %>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
-      </div>
-      <input type="date" id="start" name="trip-start"
-                value="2023-02-28"
-                min="2023-01-01" max="2023-12-31" class="search-filter">
-      <select class="search-filter">
-          <option value="" disabled selected>Car Type</option>
-          <option>4x4</option>
-          <option>Sedan</option>
-          <option>MiniVan</option>
-          <option>Sports Car</option>
-      </select>
-    </div>
-  </div>
+  <%= form_tag cars_path, class: "d-flex form-inline", method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control flex-grow-1",
+      placeholder: "Find a car" %>
+    <%= date_field_tag :date, Date.today, as: :date, html5: true, class: 'form-control'%>
+    <%= submit_tag "Search", class: "btn btn-primary" %>
+  <% end %>
+</div>
  <%# <this is the new search bar> %>
 
-<% end %>
 
 <div class="cards-container m-4">
 
