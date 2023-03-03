@@ -51,6 +51,8 @@
 }
 
 .cards-container #map {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   height: 80vh;
   width: 40vw;
   position: sticky;
@@ -74,8 +76,8 @@
 .card-c {
   width: 360px;
   background: white;
-  border-radius: 20px;
-  box-shadow: 0 0 10px $light-gray;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   font-size: 22px;
   font-weight: bolder;
   text-shadow: 0 0 10px $light-gray;
@@ -83,7 +85,7 @@
 
 .card-c img {
   width: 100%;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 .card-c-info {
@@ -100,3 +102,16 @@
 // .btn-secondary {
 //   background-color: #14a468;
 // }
+
+#car-name-search-card {
+  color: $orange;
+}
+
+#car-desc {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  padding: 16px;
+  color: $gray;
+  font-size: 16px;
+}
+
+

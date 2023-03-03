@@ -1,10 +1,13 @@
 <div class="container w-50">
-<%= simple_form_for @car do |f| %>
-  <%= f.input :model %>
-  <%= f.input :description %>
-  <%= f.input :location %>
-  <%= f.input :price %>
-  <%= f.input :photo, as: :file %>
-  <%= f.submit "List car", class: "btn btn-primary" %>
-<% end %>
+<div class="card p-5">
+  <h1 class="header-show pt-3">Rent your car</h1>
+  <%= simple_form_for @car do |f| %>
+    <%= f.input :model %>
+    <%= f.input :description %>
+    <%= f.input :location %>
+    <%= f.input :price %>
+    <%= f.input :photo, as: :file %>
+    <%= f.submit "List car", class: "btn btn-primary", style: "width: 150px; margin: auto;" %>
+  <% end %>
+  </div>
 </div>

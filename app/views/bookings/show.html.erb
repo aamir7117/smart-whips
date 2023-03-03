@@ -2,11 +2,12 @@
             <!-- Heading Row-->
 
             <div class="row gx-6 gx-lg-5 align-items-center my-5">
-                    <h1 class="font-weight-heavy display-1"><%= @booking.car.model %></h1>
+                    <h1 class="font-weight-heavy display-1 header1" style='font-size:46px'><%= @booking.car.model %></h1>
                     <p class="lead"><%= @booking.car.description %></p>
 
             </div>
-                <img class="img-fluid rounded mb-4 mb-lg-0" <%=cl_image_tag @booking.car.photo.key if @booking.car.photo.key%>
+                <img class="img-fluid mb-4 mb-lg-0 car-img" <%=cl_image_tag @booking.car.photo.key if @booking.car.photo.key%>
+            <p></p>
             <div class="row gx-4 gx-lg-5">
                 <div class="col-md-4 mb-5">
                     <div class="card h-100">

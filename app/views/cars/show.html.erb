@@ -1,7 +1,7 @@
 <div class="background-container-show">
   <div class="container pt-10">
     <div class="orange-box">
-      <h1 class="header-show"> <%= @car.model %></h1>
+      <h1 class="header-show pt-3"> <%= @car.model %></h1>
       <%= cl_image_tag @car.photo.key, crop: :fill, class: "car-img w-100" if @car.photo.key %>
     </div>
     <div class="container mt-5">
@@ -16,10 +16,10 @@
         </div>
         <div class="col-4 p-0 ps-4">
           <div class="checkout p-4">
-            <p class="carprice">Price £<%= @car.price %> per Day</p>
+            <h3 class="carprice">Price £<%= @car.price%> per Day</h3>
 
             <%= simple_form_for [@car, @booking] do |f| %>
-            <%= f.input :details, placeholder: 'Enter any additional details about your booking' %>
+            <%= f.input :details, placeholder: 'Please let us know of any special requests', label: 'Special Requests' %>
             <%= f.input :rental_start, as: :date, html5: true %>
             <%= f.input :rental_end, as: :date, html5: true %>
             <div class="d-flex justify-content-between">
@@ -31,7 +31,7 @@
         </div>
       </div>
     </div>
-      <h2 class="header1">Car Location</h2>
+      <h1 class="header1 pt-5">Car Location</h1>
     <div class ="map-box my-5" style="height: 400px;"
       data-controller="map"
       data-map-markers-value="<%= @marker.to_json %>"

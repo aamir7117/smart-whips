@@ -6,7 +6,7 @@
       <div class="card-booking">
         <%= cl_image_tag booking.car.photo.key %>
         <div class="card-booking-infos">
-          <h2><%= link_to booking.car.model, user_booking_path(current_user, booking) %></h2>
+          <h2><%= link_to booking.car.model, user_booking_path(current_user, booking), id: "header-booking-card" %></h2>
           <p>
             <%= booking.details %>
             <%=booking.rental_start.to_formatted_s(:long) %>

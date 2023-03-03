@@ -68,7 +68,7 @@ a {
 	font-family:$body-font;
 	font-size:30px;
 	font-style:italic;
-	padding:15px 40px;
+	padding:5px 40px;
 	text-decoration:none;
 	text-shadow:1px 1px 1px #000000;
 }
@@ -88,16 +88,20 @@ a:hover {
 }
 
 .btn-primary {
-  background-color: #e67e22;
+  background-color: $orange;
 }
 
 .btn-primary:hover {
-  background-color: #00CDFF;
+  background-color: orange;
   transition: 0.2s;
 }
 
 #hometitle {
 	color:#e67e22;
+}
+
+#explore-btn {
+  font-family: $headers-font;
 }
 
 #hometitle:hover  {
