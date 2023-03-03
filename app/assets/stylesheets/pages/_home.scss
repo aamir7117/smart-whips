@@ -103,3 +103,8 @@ a:hover {
 #explore-btn {
   font-family: $headers-font;
 }
+
+#hometitle:hover  {
+text-shadow: 0 0 2px #d96b0b;
+transition: 0.1s;
+}
