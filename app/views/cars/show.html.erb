@@ -1,55 +1,41 @@
 <div class="background-container-show">
-  <div class="container pt-10 ">
-
-  <div class="">
-
-    <div class="">
-
-      <div class="d-flex justify-content-between orange-box">
-        <div>
-        <h1 class="header-show"> <%= @car.model %></h1>
-          <%# <h5 class="card-title">Lamborghini Gallardo</h5> %>
-          <p class="user">owned by <%= @car.user.username %></p>
-        </div>
-        <p class="para-show"><%= link_to 'Back to our cars', cars_path, class:"btn btn-default" %></p>
-      </div>
-      <div class="">
-
-      </div>
-      <div class="">
-
-      <%= cl_image_tag @car.photo.key, width: 1200, height: 600, crop: :fill, class: "" if @car.photo.key %>
-      <div class="" style="width: 25rem;">
-              <div style="width: 100%; height: 200px;"
-              data-controller="map"
-              data-map-markers-value="<%= @marker.to_json %>"
-              data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-            </div>
-       </div>
-      </div>
-      <div class="">
-
+  <div class="container pt-10">
+    <div class="orange-box">
+      <h1 class="header-show"> <%= @car.model %></h1>
+      <%= cl_image_tag @car.photo.key, crop: :fill, class: "car-img w-100" if @car.photo.key %>
     </div>
-
-
-  </div>
-</div>
-</div>
-        <div class="container">
-          <div class="row">
-            <div class="col-8">
-                  <h2 class="para-specs">Car specs</h2>
-                  <p><%= @car.description %> <%= @car.description %> <%= @car.description %></p>
-                  <h2 class="para-descript">Owners description</h2>
-                  <p><%= @car.description  %> <%= @car.description %> <%= @car.description %> <%= @car.description %></p>
-              </div>
-            <div class="col-4">
-               <div class="">
-                  <p class="para-book-now">
-                  <%= link_to 'Book Now', new_car_booking_path(params[:id]), class:"btn btn-default" %>
-                  </p>
-                <p class="carprice">Price £450 per Day</p>
-              </div>
-            </div>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-8 p-0">
+          <div class="info p-4">
+            <h2 class="para-specs">Car specs</h2>
+            <p><%= @car.description %> <%= @car.description %> <%= @car.description %></p>
+            <h2 class="para-descript">Owners description (<%= @car.user.username %>)</h2>
+            <p><%= @car.description  %> <%= @car.description %> <%= @car.description %> <%= @car.description %> </p>
           </div>
         </div>
+        <div class="col-4 p-0 ps-4">
+          <div class="checkout p-4">
+            <p class="carprice">Price £<%= @car.price %> per Day</p>
+
+            <%= simple_form_for [@car, @booking] do |f| %>
+            <%= f.input :details, placeholder: 'Enter any additional details about your booking' %>
+            <%= f.input :rental_start, as: :date, html5: true %>
+            <%= f.input :rental_end, as: :date, html5: true %>
+            <div class="d-flex justify-content-between">
+              <%= f.submit "Book now", class: "btn btn-flat btn-success" %>
+              <%= link_to 'Go Back', cars_path, class: "btn btn-flat btn-secondary float-right", id: "gobackbtn" %>
+            </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+      <h2 class="header1">Car Location</h2>
+    <div class ="map-box my-5" style="height: 400px;"
+      data-controller="map"
+      data-map-markers-value="<%= @marker.to_json %>"
+      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
+  </div>
+</div>

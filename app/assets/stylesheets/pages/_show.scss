@@ -1,250 +1,41 @@
-// // * {
-// //   border: red 1px solid;
-// // }
+.map-box {
+  border-radius: 40px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 
-// .header-show {
-//   color: $gray;
-//   font-family: $headers-font;
-//   font-style: normal;
-//   font-weight: 700;
-//   font-size: 30px;
-//   line-height: 36px;
-// }
+.info {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
 
-// // button {
-// //   position: absolute;
-// //   left: 1280px;
-// //   top: 20px;
-// // }
+}
 
-// .background-container-show {
-//   background-color: $light-gray;
-//   height: 100vh;
-// }
+.checkout {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+  background-color: rgb(23, 189, 255);
+}
 
-// .para-book-now {
-//   color: $gray;
-//   font-family: 'IBM Plex Sans', sans-serif;
-//   font-size: 20px;
-//   line-height: 26px;
-//   a {
-//     border-radius: 20px;
-//   }
-// }
+.car-img {
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 
-// .para-show {
-//   color: $gray;
-//   font-family: 'IBM Plex Sans', sans-serif;
-//   font-size: 20px;
-//   line-height: 26px;
-//   a {
-//     border-radius: 10px;
-//   }
-// }
+.header-show {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(23, 189, 255);
+}
 
-// .para-specs {
-//   color: $gray;
-//   font-family: 'IBM Plex Sans', sans-serif;
-//   font-size: 20px;
-//   line-height: 26px;
-// }
-
-// .para-specs {
-//   color: $gray;
-//   font-family: 'IBM Plex Sans', sans-serif;
-//   font-size: 20px;
-//   line-height: 26px;
-// }
-// .para-descript {
-//   color: $gray;
-//   font-family: 'IBM Plex Sans', sans-serif;
-//   font-size: 20px;
-//   line-height: 26px;
-// }
+.header1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(23, 189, 255);
+  font-size: 30px;
+}
 
 
-
-// // h5 {
-// //   color: rgb(65, 64, 64);
-// //   font-family: 'Lora', serif;
-// //   font-size: 30px;
-// //   line-height: 36px;
-// // }
-
-// .containera {
-//   display: flex;
-//   justify-content: flex-start;
-//   flex-wrap: wrap;
-//   align-content: center;
-
-// }
-
-// .card {
-//   position: relative;
-//   display: flex;
-//   flex-direction: column;
-//   min-width: 0;
-//   word-wrap: break-word;
-//   background-color: #fff;
-//   background-clip: border-box;
-//   border: 1px solid $gray;
-//   border-radius: 0.25rem;
-// }
-// .card > hr {
-//   margin-right: 0;
-//   margin-left: 0;
-// }
-// .card > .list-group {
-//   border-top: inherit;
-//   border-bottom: inherit;
-// }
-// .card > .list-group:first-child {
-//   border-top-width: 0;
-//   border-top-left-radius: calc(0.25rem - 1px);
-//   border-top-right-radius: calc(0.25rem - 1px);
-// }
-// .card > .list-group:last-child {
-//   border-bottom-width: 0;
-//   border-bottom-right-radius: calc(0.25rem - 1px);
-//   border-bottom-left-radius: calc(0.25rem - 1px);
-// }
-// .card > .card-header + .list-group,
-// .card > .list-group + .card-footer {
-//   border-top: 0;
-// }
-
-// .card-body {
-//   flex: 1 1 auto;
-//   padding: 1rem 1rem;
-// }
-
-// .card-title {
-//   margin-bottom: 0.5rem;
-// }
-
-// .card-subtitle {
-//   margin-top: -0.25rem;
-//   margin-bottom: 0;
-// }
-
-// .card-text:last-child {
-//   margin-bottom: 0;
-//   font-family: $body-font;
-// }
-
-// .card-link + .card-link {
-//   margin-left: 1rem;
-// }
-
-// .card-header {
-//   padding: 0.5rem 1rem;
-//   margin-bottom: 0;
-//   background-color: $gray;
-//   border-bottom: 1px solid $gray;
-// }
-// .card-header:first-child {
-//   border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
-// }
-
-// .card-footer {
-//   padding: 0.5rem 1rem;
-//   background-color: $gray;
-//   border-top: 1px solid $gray;
-// }
-// .card-footer:last-child {
-//   border-radius: 0 0 calc(0.25rem - 1px) calc(0.25rem - 1px);
-// }
-
-// .card-header-tabs {
-//   margin-right: -0.5rem;
-//   margin-bottom: -0.5rem;
-//   margin-left: -0.5rem;
-//   border-bottom: 0;
-// }
-
-// .card-header-pills {
-//   margin-right: -0.5rem;
-//   margin-left: -0.5rem;
-// }
-
-// .card-img-overlay {
-//   position: absolute;
-//   top: 0;
-//   right: 0;
-//   bottom: 0;
-//   left: 0;
-//   padding: 1rem;
-//   border-radius: calc(0.25rem - 1px);
-// }
-
-// .card-img,
-// .card-img-top,
-// .card-img-bottom {
-//   width: 100%;
-// }
-
-// .card-img,
-// .card-img-top {
-//   border-top-left-radius: calc(0.25rem - 1px);
-//   border-top-right-radius: calc(0.25rem - 1px);
-// }
-
-// .card-img,
-// .card-img-bottom {
-//   border-bottom-right-radius: calc(0.25rem - 1px);
-//   border-bottom-left-radius: calc(0.25rem - 1px);
-// }
-
-// .card-group > .card {
-//   margin-bottom: 0.75rem;
-// }
-
-// .link {
-//   text-decoration: none;
-// }
-
-
-// .btn-default {
-//   background-color: #14a468;
-//   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-//   color: #fff;
-//   font-size: large;
-// }
-// .a {
-//   border-radius: 10px;
-// }
-
-// .carprice {
-//   position: right;
-//   font-size: larger;
-// }
-
-// .card-details-show {
-//   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-// }
-
-// .card-pics-show {
-//   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-// }
-
-// .card-body-show {
-//   // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-//   border-radius: 10px;
-// }
-
-// .orange-box {
-//   // background-color: #ffffff;
-//   // border-radius: 10px;
-//   padding: 10px;
-// }
-
-
-// /* image 6 */
-// .card-show {
-// position: absolute;
-// width: 1032px;
-// height: 209px;
-// left: 71px;
-// top: 219px;
-// border-radius: 49px;
-// }
+#gobackbtn {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  }
