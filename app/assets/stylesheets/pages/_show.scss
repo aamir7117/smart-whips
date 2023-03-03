@@ -23,12 +23,12 @@
 
 .header-show {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: rgb(23, 189, 255);
+  color: gray;
 }
 
 .header1 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: $gray;
+  color: gray;
   font-size: 30px;
 }
 
@@ -39,3 +39,9 @@
   text-decoration: none;
   display: inline-block;
   }
+
+
+.card {
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
