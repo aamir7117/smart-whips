@@ -46,7 +46,7 @@ car1.save
 car2 = Car.new(
   model: 'Porsche Panamera',
   description: Faker::Lorem.paragraph(sentence_count: 5, supplemental: true),
-  location: locations.shuffle!.pop,
+  location: 'Kelvingrove, Glasgow',
   price: Faker::Number.between(from: 30, to: 100)
 )
 car2.user = users.sample
@@ -59,7 +59,7 @@ car2.save
 car3 = Car.new(
   model: "Bentley Bentayga",
   description: Faker::Lorem.paragraph(sentence_count: 5, supplemental: true),
-  location: locations.shuffle!.pop,
+  location: 'Milan',
   price: Faker::Number.between(from: 30, to: 100)
 )
 car3.user = users.sample
@@ -72,7 +72,7 @@ car3.save
 car4 = Car.new(
   model: "Rolls-Royce Wraith",
   description: Faker::Lorem.paragraph(sentence_count: 5, supplemental: true),
-  location: locations.shuffle!.pop,
+  location: 'Yoker, Glasgow',
   price: Faker::Number.between(from: 30, to: 100)
 )
 car4.user = users.sample
@@ -137,7 +137,7 @@ car8.save
 car9 = Car.new(
   model: "Mercedes-Benz S Class",
   description: Faker::Lorem.paragraph(sentence_count: 5, supplemental: true),
-  location: locations.shuffle!.pop,
+  location: 'Hamburg',
   price: Faker::Number.between(from: 30, to: 100)
 )
 car9.user = users.sample
@@ -150,7 +150,7 @@ car9.save
 car10 = Car.new(
   model: "Range Rover",
   description: Faker::Lorem.paragraph(sentence_count: 5, supplemental: true),
-  location: locations.shuffle!.pop,
+  location: 'Gorbals, Glasgow',
   price: Faker::Number.between(from: 30, to: 100)
 )
 car10.user = users.sample

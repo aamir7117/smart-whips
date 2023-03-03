@@ -1,11 +1,15 @@
-<%# <h3 style="display: flex; justify-content: center;"><em>Search Results</em></h3> %>
+<h3 style="display: flex; justify-content: center;"><em>Our Fine Selection of Motor Vehicles</em></h3>
   <div class="heading">
     <div class="search-filters-background" >
-      <select class="search-filter">
-          <option value="" disabled selected>City</option>
-          <option>London</option>
-          <option>San Francisco</option>
-      </select>
+          <div>
+        <%= form_with url: cars_path, method: :get, class: "d-flex form-inline" do %>
+        <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Find a car in a city near you!"
+        %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+      </div>
       <input type="date" id="start" name="trip-start"
                 value="2023-02-28"
                 min="2023-01-01" max="2023-12-31" class="search-filter">
@@ -16,11 +20,11 @@
           <option>MiniVan</option>
           <option>Sports Car</option>
       </select>
-      <a href="/cars">
-            <button type="submit" class="search-filter"> Search </button>
-      </a>
     </div>
   </div>
+ <%# <this is the new search bar> %>
+
+<% end %>
 
 <div class="cards-container m-4">
 
