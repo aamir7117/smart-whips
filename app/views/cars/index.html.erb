@@ -23,6 +23,7 @@
           <p><strong><%= link_to car.model, car_path(car) %></strong></p>
           <span><strong>£<%= car.price%>/day</strong></span>
         </div>
+        <p class="h5"><%= car.description %></p>
       </div>
     <% end %>
   </div>

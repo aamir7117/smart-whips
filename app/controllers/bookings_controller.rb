@@ -2,7 +2,7 @@ class BookingsController < ApplicationController
   before_action :find_car, only: %i[new create]
 
   def index
-    @bookings = Booking.where(user_id: current_user).to_a
+    @bookings = Booking.where(user_id: current_user).to_a.reverse
   end
 
   def show

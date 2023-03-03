@@ -160,4 +160,16 @@ car10.photo.attach(
 )
 car10.save
 
+cars = [car1, car2, car3, car4, car5, car6, car7, car8, car9, car10]
+
+8.times do
+  booking = Booking.new(
+    details: Faker::Lorem.paragraph(sentence_count: 2, supplemental: true),
+    rental_start: Faker::Date.between(from: '2022-11-05', to: '2022-12-31'),
+    rental_end: Faker::Date.between(from: '2023-01-05', to: '2023-03-01')
+  )
+  booking.user = user1
+  booking.car = cars.shuffle!.pop
+  booking.save
+end
 puts 'finished'
